@@ -1,0 +1,10 @@
+🚨 <b>Critical Error Detected!</b> 🚨
+📌 <b>Service:</b> {{.ServiceName}}
+⚠️ <b>Error Details:</b>
+{{.Logs}}
+---
+{{- if contains .Logs "error" }}
+This is critical error
+{{ else }}
+This is warning error
+{{ end -}}

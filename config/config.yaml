@@ -1,8 +1,8 @@
-name: ${RAILWAY_SERVICE_NAME}
+name: ${SERVICE_NAME}
 host: 0.0.0.0
 port: ${PORT}
 
-public_host: https://${RAILWAY_PUBLIC_DOMAIN}
+public_host: ${PUBLIC_HOST}
 
 alert:
   debug_body: ${ALERT_DEBUG_BODY}

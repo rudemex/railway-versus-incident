@@ -1,0 +1,71 @@
+name: ${RAILWAY_SERVICE_NAME}
+host: 0.0.0.0
+port: ${PORT}
+
+public_host: https://${RAILWAY_PUBLIC_DOMAIN}
+
+alert:
+  debug_body: ${ALERT_DEBUG_BODY}
+
+  slack:
+    enable: ${SLACK_ENABLE}
+    token: ${SLACK_TOKEN}
+    channel_id: ${SLACK_CHANNEL_ID}
+    template_path: ${SLACK_TEMPLATE_PATH}
+
+  telegram:
+    enable: ${TELEGRAM_ENABLE}
+    bot_token: ${TELEGRAM_BOT_TOKEN}
+    chat_id: ${TELEGRAM_CHAT_ID}
+    template_path: ${TELEGRAM_TEMPLATE_PATH}
+
+  email:
+    enable: ${EMAIL_ENABLE}
+    smtp_host: ${SMTP_HOST}
+    smtp_port: ${SMTP_PORT}
+    username: ${SMTP_USERNAME}
+    password: ${SMTP_PASSWORD}
+    to: ${EMAIL_TO}
+    subject: ${EMAIL_SUBJECT}
+    template_path: ${EMAIL_TEMPLATE_PATH}
+
+  msteams:
+    enable: ${MSTEAMS_ENABLE}
+    webhook_url: ${MSTEAMS_WEBHOOK_URL}
+    template_path: ${MSTEAMS_TEMPLATE_PATH}
+    other_webhook_url:
+      qc: ${MSTEAMS_OTHER_WEBHOOK_URL_QC}
+
+queue:
+  enable: ${QUEUE_ENABLE}
+  debug_body: ${QUEUE_DEBUG_BODY}
+
+  sns:
+    enable: ${SNS_ENABLE}
+    https_endpoint_subscription_path: ${SNS_ENDPOINT_PATH}
+    https_endpoint_subscription: ${SNS_HTTPS_ENDPOINT_SUBSCRIPTION}
+    topic_arn: ${SNS_TOPIC_ARN}
+
+  sqs:
+    enable: ${SQS_ENABLE}
+    queue_url: ${SQS_QUEUE_URL}
+
+  pubsub:
+    enable: ${PUBSUB_ENABLE}
+
+  azbus:
+    enable: ${AZBUS_ENABLE}
+
+oncall:
+  enable: ${ONCALL_ENABLE}
+  wait_minutes: ${ONCALL_WAIT_MINUTES}
+
+  aws_incident_manager:
+    response_plan_arn: ${AWS_INCIDENT_MANAGER_RESPONSE_PLAN_ARN}
+
+redis:
+  insecure_skip_verify: ${REDIS_INSECURE_SKIP_VERIFY}
+  host: ${REDIS_HOST}
+  port: ${REDIS_PORT}
+  password: ${REDIS_PASSWORD}
+  db: ${REDIS_DB}

@@ -35,6 +35,8 @@ alert:
     template_path: ${MSTEAMS_TEMPLATE_PATH}
     other_webhook_url:
       qc: ${MSTEAMS_OTHER_WEBHOOK_URL_QC}
+      ops: ${MSTEAMS_OTHER_WEBHOOK_URL_OPS}
+      dev: ${MSTEAMS_OTHER_WEBHOOK_URL_DEV}
 
 queue:
   enable: ${QUEUE_ENABLE}
